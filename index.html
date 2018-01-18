@@ -1,0 +1,1428 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Japanese 101</title>
+
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+    <link href="css/impress-demo.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="favicon.png" />
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<!--
+
+    Now that's the core element used by impress.js.
+
+    That's the wrapper for your presentation steps. In this element all the impress.js magic happens.
+    It doesn't have to be a `<div>`. Only `id` is important here as that's how the script find it.
+
+    You probably won't need it now, but there are some configuration options that can be set on this element.
+
+    To change the duration of the transition between slides use `data-transition-duration="2000"` giving it
+    a number of ms. It defaults to 1000 (1s).
+
+    You can also control the perspective with `data-perspective="500"` giving it a number of pixels.
+    It defaults to 1000. You can set it to 0 if you don't want any 3D effects.
+    If you are willing to change this value make sure you understand how CSS perspective works:
+    https://developer.mozilla.org/en/CSS/perspective
+
+    But as I said, you won't need it for now, so don't worry - there are some simple but interesting things
+    right around the corner of this tag ;)
+
+    ----------
+    Plugins: We set the default time for autoplay plugin to 6 seconds. Autoplay will automatically advance
+    to next slide after a timeout expires.
+
+-->
+<div id="impress">
+
+    <!--
+
+        Here is where interesting thing start to happen.
+
+        Each step of the presentation should be an element inside the `#impress` with a class name
+        of `step`. These step elements are positioned, rotated and scaled by impress.js, and
+        the 'camera' shows them on each step of the presentation.
+
+        Positioning information is passed through data attributes.
+
+        In the example below we only specify x and y position of the step element with `data-x="-1000"`
+        and `data-y="-1500"` attributes. This means that **the center** of the element (yes, the center)
+        will be positioned in point x = -1000px and y = -1500px of the presentation 'canvas'.
+
+        It will not be rotated or scaled.
+
+        --------
+        Plugins: For first slide, set the autoplay time to a custom 10 seconds.
+
+    -->
+    <div id="intro" class="step centered-slide" data-x="0" data-y="0">
+        <div class="centered-title">
+          Japanese 101
+        </div>
+        <div class="centered-subtitle">
+          by Aneesa Awaludin
+        </div>
+    </div>
+
+    <div id="topics" class="step common-slide" data-x="2000" data-y="0">
+        <div class="title">
+          Topics
+        </div>
+        <div class="content">
+          <div class="substep bullet"> > Writing System </div>
+          <div class="substep bullet"> > Common Expressions </div>
+          <div class="substep bullet"> > Self-Introduction </div>
+          <div class="substep bullet"> > Culture </div>
+        </div>
+    </div>
+
+    <div id="writings-title" class="step centered-slide" data-x="4000" data-y="0">
+        <div class="centered-title">
+          Writing System
+        </div>
+    </div>
+
+    <div id="writings" class="step common-slide" data-x="6000" data-y="0">
+        <div class="title">
+          Writing Systems
+        </div>
+        <div class="content">
+          <div class="substep bullet"> > <u>Kanji</u> - imported from Mandarin Chinese characters </div>
+          <div class="substep bullet"> > <u>Hiragana</u> (original Japanese words) &amp; <u>Katakana</u> (imported words) </div>
+          <div class="substep bullet"> > <u>Romaji</u> - used by foreigners to pronounce the kanas/kanji characters </div>
+        </div>
+    </div>
+
+    <div id="kanji" class="step common-slide" data-x="8000" data-y="0">
+        <div class="title">
+          Kanji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> 一 </div>
+                <div> ichi </div>
+                <div> 1 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 二 </div>
+                <div> ni </div>
+                <div> 2 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 三 </div>
+                <div> san </div>
+                <div> 3 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 四 </div>
+                <div> yon/shi </div>
+                <div> 4 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 五 </div>
+                <div> go </div>
+                <div> 5 </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-text"> 六 </div>
+                <div> roku </div>
+                <div> 6 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 七 </div>
+                <div> nana/shichi </div>
+                <div> 7 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 八 </div>
+                <div> hachi </div>
+                <div> 8 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 九 </div>
+                <div> kyu/ku </div>
+                <div> 9 </div>
+              </td>
+              <td>
+                <div class="jpn-text"> 十 </div>
+                <div> juu </div>
+                <div> 10 </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-a" class="step common-slide" data-x="0" data-y="2000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> あ </div>
+                <div class="jpn-text"> ア </div>
+                <div> a </div>
+              </td>
+              <td>
+                <div class="jpn-text"> い </div>
+                <div class="jpn-text"> イ </div>
+                <div> i </div>
+              </td>
+              <td>
+                <div class="jpn-text"> う </div>
+                <div class="jpn-text"> ウ </div>
+                <div> u </div>
+              </td>
+              <td>
+                <div class="jpn-text"> え </div>
+                <div class="jpn-text"> エ </div>
+                <div> e </div>
+              </td>
+              <td>
+                <div class="jpn-text"> お </div>
+                <div class="jpn-text"> オ </div>
+                <div> o </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-ka" class="step common-slide" data-x="2000" data-y="2000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> か </div>
+                <div class="jpn-text"> カ </div>
+                <div> ka </div>
+              </td>
+              <td>
+                <div class="jpn-text"> き </div>
+                <div class="jpn-text"> キ </div>
+                <div> ki </div>
+              </td>
+              <td>
+                <div class="jpn-text"> く </div>
+                <div class="jpn-text"> ク </div>
+                <div> ku </div>
+              </td>
+              <td>
+                <div class="jpn-text"> け </div>
+                <div class="jpn-text"> ケ </div>
+                <div> ke </div>
+              </td>
+              <td>
+                <div class="jpn-text"> こ </div>
+                <div class="jpn-text"> コ </div>
+                <div> ko </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-text"> が </div>
+                <div class="jpn-text"> ガ </div>
+                <div> ga </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぎ </div>
+                <div class="jpn-text"> ギ </div>
+                <div> gi </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぐ </div>
+                <div class="jpn-text"> グ </div>
+                <div> gu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> げ </div>
+                <div class="jpn-text"> ゲ </div>
+                <div> ge </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ご </div>
+                <div class="jpn-text"> ゴ </div>
+                <div> go </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-sa" class="step common-slide" data-x="4000" data-y="2000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> さ </div>
+                <div class="jpn-text"> サ </div>
+                <div> sa </div>
+              </td>
+              <td>
+                <div class="jpn-text"> し </div>
+                <div class="jpn-text"> シ </div>
+                <div> shi </div>
+              </td>
+              <td>
+                <div class="jpn-text"> す </div>
+                <div class="jpn-text"> ス </div>
+                <div> su </div>
+              </td>
+              <td>
+                <div class="jpn-text"> せ </div>
+                <div class="jpn-text"> セ </div>
+                <div> se </div>
+              </td>
+              <td>
+                <div class="jpn-text"> そ </div>
+                <div class="jpn-text"> ソ </div>
+                <div> so </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-text"> ざ </div>
+                <div class="jpn-text"> ザ </div>
+                <div> za </div>
+              </td>
+              <td>
+                <div class="jpn-text"> じ </div>
+                <div class="jpn-text"> ジ </div>
+                <div> ji </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ず </div>
+                <div class="jpn-text"> ズ </div>
+                <div> zu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぜ </div>
+                <div class="jpn-text"> ゼ </div>
+                <div> ze </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぞ </div>
+                <div class="jpn-text"> ゾ </div>
+                <div> zo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-ta" class="step common-slide" data-x="6000" data-y="2000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> た </div>
+                <div class="jpn-text"> タ </div>
+                <div> ta </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ち </div>
+                <div class="jpn-text"> チ </div>
+                <div> chi </div>
+              </td>
+              <td>
+                <div class="jpn-text"> つ </div>
+                <div class="jpn-text"> ツ </div>
+                <div> tsu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> て </div>
+                <div class="jpn-text"> テ </div>
+                <div> te </div>
+              </td>
+              <td>
+                <div class="jpn-text"> と </div>
+                <div class="jpn-text"> ト </div>
+                <div> to </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-text"> だ </div>
+                <div class="jpn-text"> ダ </div>
+                <div> da </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぢ </div>
+                <div class="jpn-text"> ヂ </div>
+                <div> ji </div>
+              </td>
+              <td>
+                <div class="jpn-text"> づ </div>
+                <div class="jpn-text"> ヅ </div>
+                <div> zu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> で </div>
+                <div class="jpn-text"> デ </div>
+                <div> de </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ど </div>
+                <div class="jpn-text"> ド </div>
+                <div> do </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-na" class="step common-slide" data-x="8000" data-y="2000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> な </div>
+                <div class="jpn-text"> ナ </div>
+                <div> na </div>
+              </td>
+              <td>
+                <div class="jpn-text"> に </div>
+                <div class="jpn-text"> ニ </div>
+                <div> ni </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぬ </div>
+                <div class="jpn-text"> ヌ </div>
+                <div> nu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ね </div>
+                <div class="jpn-text"> ネ </div>
+                <div> ne </div>
+              </td>
+              <td>
+                <div class="jpn-text"> の </div>
+                <div class="jpn-text"> ノ </div>
+                <div> no </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-ha" class="step common-slide" data-x="0" data-y="4000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> は </div>
+                <div class="jpn-text"> ハ </div>
+                <div> ha </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ひ </div>
+                <div class="jpn-text"> ヒ </div>
+                <div> hi </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ふ </div>
+                <div class="jpn-text"> フ </div>
+                <div> fu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> へ </div>
+                <div class="jpn-text"> ヘ </div>
+                <div> he </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ほ </div>
+                <div class="jpn-text"> ホ </div>
+                <div> ho </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-text"> ば </div>
+                <div class="jpn-text"> バ </div>
+                <div> ba </div>
+              </td>
+              <td>
+                <div class="jpn-text"> び </div>
+                <div class="jpn-text"> ビ </div>
+                <div> bi </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぶ </div>
+                <div class="jpn-text"> ブ </div>
+                <div> bu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> べ </div>
+                <div class="jpn-text"> ベ </div>
+                <div> be </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぼ </div>
+                <div class="jpn-text"> ボ </div>
+                <div> bo </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-text"> ぱ </div>
+                <div class="jpn-text"> パ </div>
+                <div> pa </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぴ </div>
+                <div class="jpn-text"> ピ </div>
+                <div> pi </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぷ </div>
+                <div class="jpn-text"> プ </div>
+                <div> pu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぺ </div>
+                <div class="jpn-text"> ペ </div>
+                <div> pe </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ぽ </div>
+                <div class="jpn-text"> ポ </div>
+                <div> po </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-ma" class="step common-slide" data-x="2000" data-y="4000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> ま </div>
+                <div class="jpn-text"> マ </div>
+                <div> ma </div>
+              </td>
+              <td>
+                <div class="jpn-text"> み </div>
+                <div class="jpn-text"> ミ </div>
+                <div> mi </div>
+              </td>
+              <td>
+                <div class="jpn-text"> む </div>
+                <div class="jpn-text"> ム </div>
+                <div> mu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> め </div>
+                <div class="jpn-text"> メ </div>
+                <div> me </div>
+              </td>
+              <td>
+                <div class="jpn-text"> も </div>
+                <div class="jpn-text"> モ </div>
+                <div> mo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-ya" class="step common-slide" data-x="4000" data-y="4000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> や </div>
+                <div class="jpn-text"> ヤ </div>
+                <div> ya </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ゆ </div>
+                <div class="jpn-text"> ユ </div>
+                <div> yu </div>
+              </td>
+              <td>
+                <div class="jpn-text"> よ </div>
+                <div class="jpn-text"> ヨ </div>
+                <div> yo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-ra" class="step common-slide" data-x="6000" data-y="4000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> ら </div>
+                <div class="jpn-text"> ラ </div>
+                <div> ra </div>
+              </td>
+              <td>
+                <div class="jpn-text"> り </div>
+                <div class="jpn-text"> リ </div>
+                <div> ri </div>
+              </td>
+              <td>
+                <div class="jpn-text"> る </div>
+                <div class="jpn-text"> ル </div>
+                <div> ru </div>
+              </td>
+              <td>
+                <div class="jpn-text"> れ </div>
+                <div class="jpn-text"> レ </div>
+                <div> re </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ろ </div>
+                <div class="jpn-text"> ロ </div>
+                <div> ro </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-wa" class="step common-slide" data-x="8000" data-y="4000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-text"> わ </div>
+                <div class="jpn-text"> ワ </div>
+                <div> wa </div>
+              </td>
+              <td>
+                <div class="jpn-text"> を </div>
+                <div class="jpn-text"> ヲ </div>
+                <div> (w)o </div>
+              </td>
+              <td>
+                <div class="jpn-text"> ん </div>
+                <div class="jpn-text"> ン </div>
+                <div> n </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-kya" class="step common-slide" data-x="0" data-y="6000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> きゃ </div>
+                <div class="jpn-comp-text"> キャ </div>
+                <div> kya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> きゅ </div>
+                <div class="jpn-comp-text"> キュ </div>
+                <div> kyu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> きょ </div>
+                <div class="jpn-comp-text"> キョ </div>
+                <div> kyo </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> ぎゃ </div>
+                <div class="jpn-comp-text"> ギャ </div>
+                <div> gya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ぎゅ </div>
+                <div class="jpn-comp-text"> ギュ </div>
+                <div> gyu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ぎょ </div>
+                <div class="jpn-comp-text"> ギョ </div>
+                <div> gyo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-sha" class="step common-slide" data-x="2000" data-y="6000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> しゃ </div>
+                <div class="jpn-comp-text"> シャ </div>
+                <div> sha </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> しゅ </div>
+                <div class="jpn-comp-text"> シュ </div>
+                <div> shu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> しょ </div>
+                <div class="jpn-comp-text"> ショ </div>
+                <div> sho </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> じゃ </div>
+                <div class="jpn-comp-text"> ジャ </div>
+                <div> ja </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> じゅ </div>
+                <div class="jpn-comp-text"> ジュ </div>
+                <div> ju </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> じょ </div>
+                <div class="jpn-comp-text"> ジョ </div>
+                <div> jo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-cha" class="step common-slide" data-x="4000" data-y="6000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> ちゃ </div>
+                <div class="jpn-comp-text"> チャ </div>
+                <div> cha </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ちゅ </div>
+                <div class="jpn-comp-text"> チュ </div>
+                <div> chu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ちょ </div>
+                <div class="jpn-comp-text"> チョ </div>
+                <div> cho </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-nya" class="step common-slide" data-x="6000" data-y="6000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> にゃ </div>
+                <div class="jpn-comp-text"> ニャ </div>
+                <div> nya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> にゅ </div>
+                <div class="jpn-comp-text"> ニュ </div>
+                <div> nyu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> にょ </div>
+                <div class="jpn-comp-text"> ニョ </div>
+                <div> nyo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-hya" class="step common-slide" data-x="8000" data-y="6000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> ひゃ </div>
+                <div class="jpn-comp-text"> ヒャ </div>
+                <div> hya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ひゅ </div>
+                <div class="jpn-comp-text"> ヒュ </div>
+                <div> hyu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ひょ </div>
+                <div class="jpn-comp-text"> ヒョ </div>
+                <div> hyo </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> ビゃ </div>
+                <div class="jpn-comp-text"> ニャ </div>
+                <div> bya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ビゅ </div>
+                <div class="jpn-comp-text"> ニュ </div>
+                <div> byu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ビょ </div>
+                <div class="jpn-comp-text"> ニョ </div>
+                <div> byo </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> ピゃ </div>
+                <div class="jpn-comp-text"> ニャ </div>
+                <div> pya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ピゅ </div>
+                <div class="jpn-comp-text"> ニュ </div>
+                <div> pyu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> ピょ </div>
+                <div class="jpn-comp-text"> ニョ </div>
+                <div> pyo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-mya" class="step common-slide" data-x="0" data-y="8000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> みゃ </div>
+                <div class="jpn-comp-text"> ミャ </div>
+                <div> mya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> みゅ </div>
+                <div class="jpn-comp-text"> ミュ </div>
+                <div> myu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> みょ </div>
+                <div class="jpn-comp-text"> ミョ </div>
+                <div> myo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="kanas-rya" class="step common-slide" data-x="2000" data-y="8000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana &amp; Romaji
+        </div>
+        <div class="content">
+          <table>
+            <tr>
+              <td>
+                <div class="jpn-comp-text"> りゃ </div>
+                <div class="jpn-comp-text"> リャ </div>
+                <div> rya </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> りゅ </div>
+                <div class="jpn-comp-text"> リュ </div>
+                <div> ryu </div>
+              </td>
+              <td>
+                <div class="jpn-comp-text"> りょ </div>
+                <div class="jpn-comp-text"> リョ </div>
+                <div> ryo </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+    </div>
+
+    <div id="compare-writings" class="step common-slide" data-x="4000" data-y="8000">
+        <div class="kanas-title">
+          Hiragana &amp; Katakana Summary
+        </div>
+        <div class="content">
+          <div class="substep bullet"> > 71 characters (x2) </div>
+          <div class="substep bullet"> > 20/71 characters are reused (x2) </div>
+          <div class="substep bullet"> > 33 composite characters (x2) </div>
+        </div>
+    </div>
+
+    <div id="common-expressions" class="step centered-slide" data-x="6000" data-y="8000">
+        <div class="centered-title">
+          Common Expressions
+        </div>
+    </div>
+
+    <div id="ohayou" class="step common-slide expression" data-x="8000" data-y="8000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Good Morning </div>
+          <div class="jpn"> おはようございます </div>
+          <div class="roman"> OHAYOU GOZAIMASU </div>
+        </div>
+    </div>
+
+    <div id="konnichiwa" class="step common-slide expression" data-x="0" data-y="10000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Hello </div>
+          <div class="jpn"> こんにちは </div>
+          <div class="roman"> KONNICHIWA </div>
+        </div>
+    </div>
+
+    <div id="konbanwa" class="step common-slide expression" data-x="2000" data-y="10000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Good Evening </div>
+          <div class="jpn"> こんばんは </div>
+          <div class="roman"> KONBANWA </div>
+        </div>
+    </div>
+
+    <div id="sayounara" class="step common-slide expression" data-x="4000" data-y="10000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Goodbye </div>
+          <div class="jpn"> さようなら </div>
+          <div class="roman"> SAYOUNARA</div>
+        </div>
+    </div>
+
+    <div id="sumimasen" class="step common-slide expression" data-x="6000" data-y="10000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Excuse Me / I am sorry </div>
+          <div class="jpn"> すみません </div>
+          <div class="roman"> SUMIMASEN </div>
+        </div>
+    </div>
+
+    <div id="gomennasai" class="step common-slide expression" data-x="8000" data-y="10000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> I am really sorry </div>
+          <div class="jpn"> ごめんなさい </div>
+          <div class="roman"> GOMENNASAI </div>
+        </div>
+    </div>
+
+    <div id="itadakimasu" class="step common-slide expression" data-x="0" data-y="12000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Thank you for the meal (before eating) </div>
+          <div class="jpn"> いただきます </div>
+          <div class="roman"> ITADAKIMASU </div>
+        </div>
+    </div>
+
+    <div id="gochisousama" class="step common-slide expression" data-x="2000" data-y="12000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Thank you for the meal (after eating) </div>
+          <div class="jpn"> ごちそうさま </div>
+          <div class="roman"> GOCHISOUSAMA </div>
+        </div>
+    </div>
+
+    <div id="arigatou" class="step common-slide expression" data-x="4000" data-y="12000">
+        <div class="title">
+          Common Expressions
+        </div>
+        <div class="content">
+          <div class="roman"> Thank you </div>
+          <div class="jpn"> ありがとうございます </div>
+          <div class="roman"> ARIGATOU GOZAIMASU </div>
+        </div>
+    </div>
+
+    <div id="self-introduction" class="step centered-slide" data-x="6000" data-y="12000">
+        <div class="centered-title">
+          Self-Introduction
+        </div>
+    </div>
+
+    <div id="hajimemashite" class="step common-slide expression" data-x="8000" data-y="12000">
+        <div class="title">
+          Self-Introduction
+        </div>
+        <div class="content">
+          <div class="roman"> Pleased to meet you </div>
+          <div class="jpn"> はじめまして </div>
+          <div class="roman"> HAJIMEMASHITE </div>
+        </div>
+    </div>
+
+    <div id="namaedesu" class="step common-slide expression" data-x="0" data-y="14000">
+        <div class="title">
+          Self-Introduction
+        </div>
+        <div class="content">
+          <div class="roman"> I am [name] </div>
+          <div class="jpn"> _____ です </div>
+          <div class="roman"> _____ DESU </div>
+        </div>
+    </div>
+
+    <div id="namaetomoushimasu" class="step common-slide expression" data-x="2000" data-y="14000">
+        <div class="title">
+          Self-Introduction
+        </div>
+        <div class="content">
+          <div class="roman"> I am [name] </div>
+          <div class="jpn"> _____ と もうします </div>
+          <div class="roman"> _____ TO MOUSHIMASU </div>
+        </div>
+    </div>
+
+    <div id="nansaidesuka" class="step common-slide expression" data-x="4000" data-y="14000">
+        <div class="title">
+          Self-Introduction
+        </div>
+        <div class="content">
+          <div class="roman"> I am [age] years old </div>
+          <div class="jpn"> _____さい です </div>
+          <div class="roman"> _____ SAI DESU </div>
+        </div>
+    </div>
+
+    <div id="sanjuuyonsaidesuka" class="step common-slide expression" data-x="6000" data-y="14000">
+        <div class="title">
+          Self-Introduction
+        </div>
+        <div class="content">
+          <div class="roman"> I am 24 years old </div>
+          <div class="jpn"> 二十四さい です </div>
+          <div class="roman"> NIJUUYONSAI DESU </div>
+        </div>
+    </div>
+
+    <div id="yoroshiku" class="step common-slide expression" data-x="8000" data-y="14000">
+        <div class="title">
+          Self-Introduction
+        </div>
+        <div class="content">
+          <div class="roman"> Please be nice to me </div>
+          <div class="jpn"> よろしくおねがいします </div>
+          <div class="roman"> YOROSHIKU ONEGAI SHIMASU </div>
+        </div>
+    </div>
+
+    <div id="cultures" class="step centered-slide" data-x="0" data-y="16000">
+        <div class="centered-title">
+          Cultures
+        </div>
+    </div>
+
+    <div id="san" class="step common-slide" data-x="2000" data-y="16000">
+        <div class="title">
+          Name Suffixes
+        </div>
+        <div class="content">
+          <div class="substep bullet"> > San --> Polite (New acquaintance, Friends) </div>
+          <div class="substep bullet"> > Sama --> Respect (Brother, Customers) </div>
+          <div class="substep bullet"> > Kun --> (Close males friends, Female subordinate) </div>
+          <div class="substep bullet"> > Chan --> (Close friends (m/f), Younger male) </div>
+        </div>
+    </div>
+
+    <div id="train" class="step common-slide" data-x="4000" data-y="16000">
+        <div class="title">
+          Train
+        </div>
+        <div class="content">
+          <div class="substep bullet"> > Buy tickets at the machines </div>
+          <div class="substep bullet"> > Tickets are sold by the prices, not by the destinations </div>
+          <div class="substep bullet"> > Every train station has a price map </div>
+          <div class="substep bullet"> > Machines often look more complicated than they are </div>
+          <div class="substep bullet"> > Drop your coins in the slots, and press the correct price button </div>
+        </div>
+    </div>
+
+    <div id="bus" class="step common-slide" data-x="6000" data-y="16000">
+        <div class="title">
+          Local Bus
+        </div>
+        <div class="content">
+          <div class="substep bullet"> > Enter through the middle door, take the numbered ticket </div>
+          <div class="substep bullet"> > Check your bus fare from a screen display at the front of the bus </div>
+          <div class="substep bullet"> > Your fare corresponds to the number on the ticket </div>
+          <div class="substep bullet"> > Pay the exact amount - coin change machine is provided for 1000 yen bill </div>
+          <div class="substep bullet"> > Get off through the front door </div>
+        </div>
+    </div>
+
+    <div id="questions" class="step centered-slide" data-x="8000" data-y="16000">
+        <div class="centered-title">
+          Questions?
+        </div>
+    </div>
+
+    <!--
+
+        The `id` attribute of the step element is used to identify it in the URL, but it's optional.
+        If it is not defined, it will get a default value of `step-N` where N is a number of slide.
+
+        So in the example below it'll be `step-2`.
+
+        The hash part of the url when this step is active will be `#/step-2`.
+
+        You can also use `#step-2` in a link, to point directly to this particular step.
+
+        Please note, that while `#/step-2` (with slash) would also work in a link it's not recommended.
+        Using classic `id`-based links like `#step-2` makes these links usable also in fallback mode.
+
+    -->
+    <!-- <div class="step slide" data-x="0" data-y="-1500">
+        <q>Don’t you think that presentations given <strong>in modern browsers</strong> shouldn’t <strong>copy the limits</strong> of ‘classic’ slide decks?</q>
+    </div>
+
+    <div class="step slide" data-x="1000" data-y="-1500">
+        <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
+    </div> -->
+
+    <!--
+
+        This is an example of step element being scaled.
+
+        Again, we use a `data-` attribute, this time it's `data-scale="4"`, so it means that this
+        element will be 4 times larger than the others.
+        From presentation and transitions point of view it means, that it will have to be scaled
+        down (4 times) to make it back to its correct size.
+
+    -->
+    <!-- <div id="title" class="step" data-x="0" data-y="0" data-scale="4">
+        <span class="try">then you should try</span>
+        <h1>impress.js<sup>*</sup></h1>
+        <span class="footnote"><sup>*</sup> no rhyme intended</span>
+    </div> -->
+
+    <!--
+
+        This element introduces rotation.
+
+        Notation shouldn't be a surprise. We use `data-rotate="90"` attribute, meaning that this
+        element should be rotated by 90 degrees clockwise.
+
+    -->
+    <!-- <div id="its" class="step" data-x="850" data-y="3000" data-rotate="90" data-scale="5">
+        <p>It’s a <strong>presentation tool</strong> <br/>
+        inspired by the idea behind <a href="http://prezi.com">prezi.com</a> <br/>
+        and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.</p>
+    </div>
+
+    <div id="big" class="step" data-x="3500" data-y="2100" data-rotate="180" data-scale="6">
+        <p>visualize your <b>big</b> <span class="thoughts">thoughts</span></p>
+    </div> -->
+
+    <!--
+
+        And now it gets really exciting! We move into third dimension!
+
+        Along with `data-x` and `data-y`, you can define the position on third (Z) axis, with
+        `data-z`. In the example below we use `data-z="-3000"` meaning that element should be
+        positioned far away from us (by 3000px).
+
+    -->
+    <!-- <div id="tiny" class="step" data-x="2825" data-y="2325" data-z="-3000" data-rotate="300" data-scale="1">
+        <p>and <b>tiny</b> ideas</p>
+    </div> -->
+
+    <!--
+
+        This step here doesn't introduce anything new when it comes to data attributes, but you
+        should notice in the demo that some words of this text are being animated.
+        It's a very basic CSS transition that is applied to the elements when this step element is
+        reached.
+
+        At the very beginning of the presentation all step elements are given the class of `future`.
+        It means that they haven't been visited yet.
+
+        When the presentation moves to given step `future` is changed to `present` class name.
+        That's how animation on this step works - text moves when the step has `present` class.
+
+        Finally when the step is left the `present` class is removed from the element and `past`
+        class is added.
+
+        So basically every step element has one of three classes: `future`, `present` and `past`.
+        Only one current step has the `present` class.
+
+        Note: data-x/y/z attributes, if not defined, by default will inherit the value of the
+        previous step. So to get back to 0 on the z-axis, we must set it to 0.
+        See src/plugins/rel/README.md for more information.
+
+    -->
+    <!-- <div id="ing" class="step" data-x="3500" data-y="-850" data-z="0" data-rotate="270" data-scale="6">
+        <p>by <b class="positioning">positioning</b>, <b class="rotating">rotating</b> and <b class="scaling">scaling</b> them on an infinite canvas</p>
+    </div>
+
+    <div id="imagination" class="step" data-x="6700" data-y="-300" data-scale="6">
+        <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+    </div>
+
+    <div id="source" class="step" data-x="6300" data-y="2000" data-rotate="20" data-scale="4">
+        <p>want to know more?</p>
+        <q><a href="http://github.com/impress/impress.js">use the source</a>, Luke!</q>
+    </div>
+
+    <div id="one-more-thing" class="step" data-x="6000" data-y="4000" data-scale="2">
+        <p>one more thing...</p>
+    </div> -->
+
+    <!--
+
+        And the last one shows full power and flexibility of impress.js.
+
+        You can not only position element in 3D, but also rotate it around any axis.
+        So this one here will get rotated by -40 degrees (40 degrees anticlockwise) around X axis and
+        10 degrees (clockwise) around Y axis.
+
+        You can of course rotate it around Z axis with `data-rotate-z` - it has exactly the same effect
+        as `data-rotate` (these two are basically aliases).
+
+    -->
+    <!-- <div id="its-in-3d" class="step" data-x="6200" data-y="4300" data-z="-100" data-rotate-x="-40" data-rotate-y="10" data-scale="2">
+        <p><span class="have">have</span> <span class="you">you</span> <span class="noticed">noticed</span> <span class="its">it’s</span> <span class="in">in</span> <b>3D<sup>*</sup></b>?</p>
+        <span class="footnote">* beat that, prezi ;)</span>
+    </div> -->
+
+    <!--
+
+        So to summarize of all the possible attributes used to position presentation steps, we have:
+
+        * `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
+            the canvas in pixels; their default value is 0;
+        * `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
+            the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
+            are exactly the same;
+        * `data-scale` - defines the scale of step element; default value is 1
+
+        These values are used by impress.js in CSS transformation functions, so for more information consult
+        CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+
+    -->
+    <!-- <div id="overview" class="step" data-x="3000" data-y="1500" data-z="0" data-scale="10">
+    </div> -->
+
+</div>
+
+<!--
+    This is a UI plugin. You can read more about plugins in src/plugins/README.md.
+    For now, I'll just tell you that this adds some graphical controls to navigate the
+    presentation. In the CSS file you can style them as you want. We've put them bottom right.
+-->
+<div id="impress-toolbar"></div>
+
+<!--
+
+    Hint is not related to impress.js in any way.
+
+    But it can show you how to use impress.js features in creative way.
+
+    When the presentation step is shown (selected) its element gets the class of "active" and the body element
+    gets the class based on active step id `impress-on-ID` (where ID is the step's id)... It may not be
+    so clear because of all these "ids" in previous sentence, so for example when the first step (the one with
+    the id of `bored`) is active, body element gets a class of `impress-on-bored`.
+
+    This class is used by this hint below. Check CSS file to see how it's shown with delayed CSS animation when
+    the first step of presentation is visible for a couple of seconds.
+
+    ...
+
+    And when it comes to this piece of JavaScript below ... kids, don't do this at home ;)
+    It's just a quick and dirty workaround to get different hint text for touch devices.
+    In a real world it should be at least placed in separate JS file ... and the touch content should be
+    probably just hidden somewhere in HTML - not hard-coded in the script.
+
+    Just sayin' ;)
+
+-->
+<!-- <div class="hint">
+    <p>Use a spacebar or arrow keys to navigate. <br/>
+       Press 'P' to launch speaker console.</p>
+</div> -->
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+}
+</script>
+
+<!--
+
+    Last, but not least.
+
+    To make all described above really work, you need to include impress.js in the page.
+    I strongly encourage to minify it first.
+
+    In here I just include full source of the script to make it more readable.
+
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document. Not only because it's a good practice, but also
+    because it should be done when the whole document is ready.
+    Of course you can wrap it in any kind of "DOM ready" event, but I was too lazy to do so ;)
+
+-->
+<script src="js/impress.js"></script>
+<script>impress().init();</script>
+
+<!--
+
+    The `impress()` function also gives you access to the API that controls the presentation.
+
+    Just store the result of the call:
+
+        var api = impress();
+
+    and you will get three functions you can call:
+
+        `api.init()` - initializes the presentation,
+        `api.next()` - moves to next step of the presentation,
+        `api.prev()` - moves to previous step of the presentation,
+        `api.goto( stepIndex | stepElementId | stepElement, [duration] )` - moves the presentation to the step given by its index number
+                id or the DOM element; second parameter can be used to define duration of the transition in ms,
+                but it's optional - if not provided default transition duration for the presentation will be used.
+
+    You can also simply call `impress()` again to get the API, so `impress().next()` is also allowed.
+    Don't worry, it wont initialize the presentation again.
+
+    For some example uses of this API check the last part of the source of impress.js where the API
+    is used in event handlers.
+
+-->
+
+</body>
+</html>
+
+<!--
+
+    Now you know more or less everything you need to build your first impress.js presentation, but before
+    you start...
+
+    Oh, you've already cloned the code from GitHub?
+
+    You have it open in text editor?
+
+    Stop right there!
+
+    That's not how you create awesome presentations. This is only a code. Implementation of the idea that
+    first needs to grow in your mind.
+
+    So if you want to build great presentation take a pencil and piece of paper. And turn off the computer.
+
+    Sketch, draw and write. Brainstorm your ideas on a paper. Try to build a mind-map of what you'd like
+    to present. It will get you closer and closer to the layout you'll build later with impress.js.
+
+    Get back to the code only when you have your presentation ready on a paper. It doesn't make sense to do
+    it earlier, because you'll only waste your time fighting with positioning of useless points.
+
+    If you think I'm crazy, please put your hands on a book called "Presentation Zen". It's all about
+    creating awesome and engaging presentations.
+
+    Think about it. 'Cause impress.js may not help you, if you have nothing interesting to say.
+
+-->
+
+<!--
+
+    Are you still reading this?
+
+    For real?
+
+    I'm impressed! Feel free to let me know that you got that far (I'm @bartaz on Twitter), 'cause I'd like
+    to congratulate you personally :)
+
+    But you don't have to do it now. Take my advice and take some time off. Make yourself a cup of coffee, tea,
+    or anything you like to drink. And raise a glass for me ;)
+
+    Cheers!
+
+-->
